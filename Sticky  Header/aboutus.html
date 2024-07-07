@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us - Foodie's Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="WK logo design.jpg">
+    <style>
+        body {
+            background-color: rgb(204, 232, 232);
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            color: #333;
+            background-image: url('images/pic7.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100%; /* Ensure full height of viewport */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.5s ease;
+        }
+
+        .section img {
+            width: 400px;
+            height: 400px;
+            margin: 0 20px;
+            transform: translateY(50px); /* Initial position offscreen */
+            transition: transform 0.5s ease;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section.visible img {
+            transform: translateY(0); /* Move image into view */
+        }
+
+        .right {
+            flex-direction: row-reverse;
+        }
+
+        h1 {
+            color: #d1320f;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .one h1 {
+            color: black; /* Change the color to black */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="one">
+                <img src="images/home.jpg" style="height:35px;width:35px;" alt="home">
+                <h1>Welcome U All!!!</h1>
+                <ul>
+                    <li><a href="Home.html" style="text-decoration: none; color: inherit;">Home</a> | </li>
+                    <li><a href="sign_up.html" style="text-decoration: none; color: inherit;">Sign Up</a> | </li>
+                    <li><a href="items.html" style="text-decoration: none; color: inherit;">Items</a> | </li>
+                    <li><a href="aboutus.html" style="text-decoration: none; color: inherit;">About us</a> | </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <center><h1>FOODIE'S  HEAVEN!!!</h1></center>
+        <center><h2>SIGNATURE DISHES</h2></center>
+
+        <div class="section">
+           
+            <img src="images/pic1.jpg" alt="Full Meals">
+            <p style="text-align: justify;"><b>The ultimate culinary experience with my signature full meals, where each dish is a harmonious blend of flavors<br> and textures, crafted to perfection. From succulent mains to delectable sides, every bite promises a journey of taste<br> that tantalizes your senses and leaves you yearning for more. Allow yourself to be swept away by the artistry and<br> passion that goes into every meal, transforming your dining experience into a memorable feast for both the palate <br>and the soul.</b></p>
+        </div>
+        
+        <div class="section right">
+            <img src="images/pic3.jpg" alt="North Indian">
+            <p style="text-align: justify;"><b>In the rich and vibrant flavors of North Indian cuisine with my signature dishes. Delight in the creamy, <br>spiced perfection of paneer, paired with warm, fluffy naan that’s perfect for soaking up every delicious <br>bite. Complement your meal with a refreshing and colorful salad, brimming with fresh ingredients and<br> aromatic herbs. Each dish is a testament to the tradition and culinary artistry of North India, promising<br> an unforgettable dining experience that transports you straight to the heart of this beloved cuisine.</b></p>
+        </div>
+        
+        
+        <div class="section">
+            
+            <img src="images/pic4.jpg" alt="Fishes">
+            <p style="text-align: justify;"><b>Dive into the exquisite flavors of my signature fish dishes, where each creation is a celebration<br> of the ocean's bounty. Savor the perfectly cooked, tender fish, infused with a symphony of spices<br> and herbs that highlight its natural flavors. From tangy marinades to rich, creamy sauces, every <br>element is thoughtfully crafted to elevate your dining experience. Accompanied by vibrant sides <br>and fresh, zesty garnishes, these fish dishes promise a delightful and memorable culinary journey <br>that satisfies both the heart and the palate.</b></p>
+        </div>
+        
+        <div class="section right">
+            <img src="images/pic5.jpg" alt="Chicken">
+            <p style="text-align: justify;"><b>Experience the irresistible allure of my signature chicken dishes, where each bite is a testament to culinary excellence.<br> Succulent and flavorful, the chicken is meticulously prepared and seasoned to perfection, ensuring a tender and juicy <br>delight with every forkful. From rich, aromatic curries to crispy, golden-brown creations, these dishes offer a tantalizing <br>array of textures and tastes. Paired with complementary sides and vibrant garnishes, my chicken dishes promise a <br>dining experience that is as satisfying as it is unforgettable, capturing the essence of culinary artistry in every mouthful.</b></p>
+        </div>
+        
+        <div class="section">
+            <img src="images/pic6.jpg" alt="Mutton">
+            <p style="text-align: justify;"><b>Embark on a culinary adventure with my signature mutton dishes, where every plate showcases the depth <br>and richness of this exquisite meat. Slow-cooked to perfection, the mutton is tender and juicy, infused with<br> a blend of aromatic spices that elevate its natural flavors. From hearty stews to sizzling grills, each dish is<br> a masterful balance of taste and texture, designed to delight your senses. Accompanied by carefully chosen<br> sides and garnishes, my mutton dishes offer a luxurious dining experience that leaves a lasting impression, <br>celebrating the art of fine cuisine with every bite.</b></p>
+        </div>
+        
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Foodie's Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="WK logo design.jpg">
+    <style>
+        .background {
+            background-image: url('images/pic8.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: black;
+        }
+
+        h1, p {
+            margin: 0;
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="text"], input[type="password"], input[type="date"], input[type="email"] {
+            width: 250px;
+            height: 30px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 150px;
+            height: 40px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="one">
+                <img src="images/home.jpg" style="height:35px;width:35px;" alt="home">
+                <h1>Welcome U All!!!</h1>
+                <ul>
+                    <li><a href="Home.html" style="text-decoration: none; color: inherit;">Home</a> | </li>
+                    <li><a href="sign_up.html" style="text-decoration: none; color: inherit;">Sign Up</a> | </li>
+                    <li><a href="items.html" style="text-decoration: none; color: inherit;">Items</a> | </li>
+                    <li><a href="aboutus.html" style="text-decoration: none; color: inherit;">About us</a> | </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="background">
+        <div class="Food" style="background-image: url('images/bddd.jpg');"></div>
+        <div class="Eight">
+            <h1>Welcome to Foodie's Haven!!!</h1><br>
+            <div class="form-container">
+                <form>
+                    <table>
+                        <tr>
+                            <td>Username :</td>
+                            <td><input type="text" required></td>
+                        </tr>
+                        <tr>
+                            <td>Password :</td>
+                            <td><input type="password" required></td>
+                        </tr>
+                        <tr>
+                            <td>Date of Birth :</td>
+                            <td><input type="date" required></td>
+                        </tr>
+                        <tr>
+                            <td>Email-id :</td>
+                            <td><input type="email" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center;">
+                                <input type="submit" value="Submit">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
